@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.sketchDiv{
+    height: 10px;
+    width: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+.sketchDiv:hover{
+    background-color: grey;
+}
