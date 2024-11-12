@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        const container = document.querySelector(".container");
+
+        let sixteenSixteenGrid = () =>{
+            for(let i = 0; i < 16; i++){
+                const columnDiv = document.createElement("div");
+                columnDiv.classList.add("columnDiv");
+                for(let o = 0; o < 16; o++){
+                    const simpleDiv = document.createElement("div");
+                    simpleDiv.classList.add("sketchDiv");
+                    columnDiv.appendChild(simpleDiv);
+                };
+                container.appendChild(columnDiv);
+            };
+        };
+        sixteenSixteenGrid();
+    </script>
+</body>
+</html>
