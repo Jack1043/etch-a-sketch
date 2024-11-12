@@ -1,6 +1,11 @@
+.customButtonContainer{
+    display: flex;
+    justify-content: center;
+}
 .container{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 .sketchDiv{
     height: 10px;
