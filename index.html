@@ -7,23 +7,31 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <div class="customButtonContainer">
+        <button onclick=customGridAlert() class="customGrid">Custom grid</button>
+    </div>
     <div class="container"></div>
-    <script>
-        const container = document.querySelector(".container");
-
-        let sixteenSixteenGrid = () =>{
-            for(let i = 0; i < 16; i++){
-                const columnDiv = document.createElement("div");
-                columnDiv.classList.add("columnDiv");
-                for(let o = 0; o < 16; o++){
-                    const simpleDiv = document.createElement("div");
-                    simpleDiv.classList.add("sketchDiv");
-                    columnDiv.appendChild(simpleDiv);
-                };
-                container.appendChild(columnDiv);
-            };
-        };
-        sixteenSixteenGrid();
-    </script>
 </body>
+<script>
+    const container = document.querySelector(".container");
+
+    let sixteenSixteenGrid = () =>{
+        for(let i = 0; i < 16; i++){
+            const columnDiv = document.createElement("div");
+            columnDiv.classList.add("columnDiv");
+            for(let o = 0; o < 16; o++){
+                const simpleDiv = document.createElement("div");
+                simpleDiv.classList.add("sketchDiv");
+                columnDiv.appendChild(simpleDiv);
+            };
+            container.appendChild(columnDiv);
+        };
+    };
+
+    sixteenSixteenGrid();
+
+    function customGridAlert() {
+        let customGridInt = prompt("Enter customer grid amount", "Limit is 100")
+    }
+</script>
 </html>
