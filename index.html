@@ -15,23 +15,31 @@
 <script>
     const container = document.querySelector(".container");
 
-    let sixteenSixteenGrid = () =>{
-        for(let i = 0; i < 16; i++){
+    let makeGrid = (gridSize) =>{
+        container.innerHTML = "";
+        for(let i = 0; i < gridSize; i++){
             const columnDiv = document.createElement("div");
             columnDiv.classList.add("columnDiv");
-            for(let o = 0; o < 16; o++){
+            for(let o = 0; o < gridSize; o++){
                 const simpleDiv = document.createElement("div");
                 simpleDiv.classList.add("sketchDiv");
                 columnDiv.appendChild(simpleDiv);
+                generateColour();
             };
             container.appendChild(columnDiv);
         };
     };
 
-    sixteenSixteenGrid();
-
     function customGridAlert() {
-        let customGridInt = prompt("Enter customer grid amount", "Limit is 100")
-    }
+        let customGridInt = prompt("Enter customer grid amount", "Limit is 100");
+        if(customGridInt > 100){
+            alert("Value too high. The limit is 100.");
+        }
+        else{
+            makeGrid(customGridInt);
+        };
+    };
+
+    makeGrid(16);
 </script>
 </html>
